@@ -1,0 +1,27 @@
+package com.demo.i18n.tools.model;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class FieldMappingResponse implements Serializable {
+
+    private ExcelData childData;
+
+    private List<ExcelData> parentData;
+
+    public ExcelData getChildData() {
+        return childData;
+    }
+
+    public void setChildData(ExcelData childData) {
+        this.childData = childData;
+    }
+
+    public List<ExcelData> getParentData() {
+        return parentData;
+    }
+
+    public void setParentData(List<ExcelData> parentData) {
+        this.parentData = parentData;
+    }
+}

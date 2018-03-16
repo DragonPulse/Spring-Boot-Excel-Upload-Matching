@@ -1,0 +1,66 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:fragment="header-css">
+	<!-- this is header-css -->
+	<link rel="stylesheet" type="text/css"
+		th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</div>
+</head>
+<body>
+	<div th:fragment="header">
+		<!-- this is header -->
+		<nav class="navbar navbar-inverse">
+
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a class="navbar-brand" th:href="@{/admin}">File Data Match</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<!-- <div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav" >
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">User Management <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a th:href="@{/openids}">All Open Ids</a></li>
+								<li><a th:href="@{/allsubscribers}">All User Details</a></li>
+							</ul></li>
+
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Message Management <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a th:href="@{/welcomeMessage}">Default Welcome
+										Message</a></li>
+								<li><a th:href="@{/sendMessage}">Send Message</a></li>
+								<li><a th:href="@{/allMessages}">See All Messages</a></li>
+							</ul></li>
+
+
+					</ul>
+
+
+
+					<ul class="nav navbar-nav navbar-right"
+						sec:authorize="isAuthenticated()">
+						<li><a th:href="@{/logout}">Logout</a></li>
+					</ul>
+
+
+				</div> -->
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+	</div>
+
+</body>
+</html>

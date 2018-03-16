@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+
+
+</head>
+<body>
+
+	<div th:replace="fragments/header :: header" />
+
+	
+	<div class="container">
+	<form id="upload-file-form">
+		<div class="well well-lg">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Parent File / Reference Data File</div>
+				<div class="panel-body">
+					<div id="articles">
+						
+							<label for="upload-file-input">Upload your file:</label> <input
+								id="upload-parentfile-input" type="file" name="uploadparentfile"
+								accept="*" />
+							<button type="button" class="btn btn-success" name="btnSave" id="btnUploadParent">Upload</button>
+						
+
+					</div>
+				</div>
+			</div>
+			<br />
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Parent file Column Headers </div>
+				<div class="panel-body">
+					<div id="ui-selectable">
+						 <select class="form-control" id="columnHeaderParent">
+					    
+					    </select>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="well well-lg">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Child File / Actual Data File</div>
+				<div class="panel-body">
+					<div id="articles">
+						
+							<label >Upload your file:</label> <input
+								id="upload-childfile-input" type="file" name="uploadchildfile"
+								accept="*" />
+								<button type="button" class="btn btn-success" name="btnSave" id="btnUploadChild">Upload</button>
+						
+
+					</div>
+				</div>
+			</div>
+			<br />
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Child file Column Headers </div>
+				<div class="panel-body">
+					<div id="ui-selectable">
+						 <select class="form-control" id="columnHeaderChild">
+					    
+					    </select>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<button type="button" class="btn btn-success" name="btnMatchFiles"
+				id="btnMatchFiles">validate</button>
+		</form>
+	</div>
+
+	<div>
+		<table id="grid"><tr><td></td></tr></table>
+    		<div id="pager"></div>
+	</div>
+
+
+
+	<div th:replace="fragments/footer :: footer" />
+
+
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.ok-soft-gmbh.com/jqGrid/jquery.jqGrid-4.4.1/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/ui.jqgrid.css" />
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	 <script type="text/ecmascript" src="/js/jquery.jqGrid.min.js"></script>
+	 <script type="text/ecmascript" src="/js/i18n/grid.locale-en.js"></script>
+	<script src="/js/app/index.js"></script>
+</body>
+</html>
