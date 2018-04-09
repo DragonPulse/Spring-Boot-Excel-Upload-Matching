@@ -2,4 +2,4 @@
 Using Apache Poi, Validate the PArent file and child file records and show the matcing records in tree hirarchy
 
 
-Special thanks to  [PeaceUCR] [] for their design or development support
+Special thanks to  [PingHe](https://github.com/PeaceUCR) for their design or development support
