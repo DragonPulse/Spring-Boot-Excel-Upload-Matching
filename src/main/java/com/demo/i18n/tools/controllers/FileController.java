@@ -88,7 +88,7 @@ public class FileController {
 
 	@RequestMapping(value = "/matchFiles", method = RequestMethod.POST)
 	@ResponseBody
-	public GridResponse<FieldMappingResponse> matchFiles(@RequestParam("uploadparentfile") MultipartFile parentfile,@RequestParam("parentColumn") String parentColumnHeader,
+	public List<FieldMappingResponse> matchFiles(@RequestParam("uploadparentfile") MultipartFile parentfile,@RequestParam("parentColumn") String parentColumnHeader,
 			@RequestParam("uploadchildfile") MultipartFile childfile,@RequestParam("childColumn") String childColumnHeader) throws EncryptedDocumentException, InvalidFormatException, IOException {
 
 		String parentFilePath = getFilePathAfterSavingFileToTemp(parentfile);
@@ -99,15 +99,7 @@ public class FileController {
 
 		Map<String,List<ExcelData>> mapOfParent = buildDictoryBasedonColumnKey(parentFile,parentColumnHeader);
 		List<FieldMappingResponse> fieldMappingResponses = getMatchingParentsForChild(mapOfParent,childFile,childColumnHeader);
-		
-		GridResponse<FieldMappingResponse> gridResponse = new GridResponse<>();
-		
-		
-		gridResponse.setPage(1);
-		gridResponse.setTotal(String.valueOf(Math.ceil((double) fieldMappingResponses.size() / 10)));
-		gridResponse.setRecords(String.valueOf(fieldMappingResponses.size()));
-		gridResponse.setRows(fieldMappingResponses);
-		return gridResponse;
+		return fieldMappingResponses;
 
 	}
 

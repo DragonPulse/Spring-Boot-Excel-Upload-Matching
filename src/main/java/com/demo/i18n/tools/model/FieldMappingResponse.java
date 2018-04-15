@@ -5,7 +5,12 @@ import java.util.List;
 
 public class FieldMappingResponse implements Serializable {
 
-    private ExcelData childData;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2814075726832958394L;
+
+	private ExcelData childData;
 
     private List<ExcelData> parentData;
 
